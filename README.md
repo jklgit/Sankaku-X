@@ -1,2 +1,3 @@
 # Sankaku-X
-AddOn for Sankakucomplex for own personal use.
+
+Progress paused. First alpha version available.
