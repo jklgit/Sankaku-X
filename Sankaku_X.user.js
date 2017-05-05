@@ -5,7 +5,7 @@
 // @include     https://chan.sankakucomplex.com*
 // @include     https://idol.sankakucomplex.com*
 // @version     0
-// @updateURL	https://github.com/jklgit/Sankaku-X/Sankaku_X.user.js
+// @updateURL	https://jklgit.github.io/Sankaku-X/Sankaku_X.user.js
 // @grant       none
 // ==/UserScript==
 
