@@ -21,7 +21,6 @@
  * - Fav post if vote 5 and vice versa
  * - Fix child-preview adding, it doesnt check for child posts with p-id correctly?
  * - Detail comparison with Post, even detailer when comparing two posts
- * - BACKSPACE to reset hotkeys, currently only ESC
  * - Tag menus: subscription (with account look-up for me)
  * - Tag and post toolbar
  * - Post action menu
@@ -39,6 +38,7 @@ css.type = "text/css";
 css.id = 'sx-css-main';
 css.innerHTML = ".sx-background{background:rgb(250, 250, 250) none repeat scroll 0% 0%}.sx-box{border:#DDD solid 1px}#sx-header-placeholder{height:24px;margin-bottom:10px}#sx-header{position:fixed;top:0px;left:0px;width:100%;border-bottom:#DDD solid 1px;padding-left:10px;z-index:100010}#sx-header ul{position:relative;margin:0;float:left}#sx-header ul > li{list-style:none;position:relative;margin-left:0px;height:24px;line-height:24px;float:left}#sx-header li{padding-left:1em;padding-right:1em;white-space:nowrap}.sx-max-anchor{padding-left:0 !important;padding-right:0 !important}.sx-max-anchor > a{display:block;padding-left:1em;padding-right:1em}#sx-header li:hover{background-color:#EEE}#sx-header ul > li > ul{position:absolute;top:24px;margin:0;display:none}#sx-header ul > li > ul > li{float:none;display:block}#sx-header ul > li:hover > ul{display:block}#sx-navbar-wrapper{font-size:1.2em;border-right:#DDD solid 1px;width:302.3px}#sx-toolbar-wrapper{margin-left:302.3px;border-left:#DDD solid 1px}#sx-toolbar{display:flex;flex-wrap:nowrap;justify-content:space-between;align-items:center;min-height:24px;padding-left:10px;padding-right:2em}#sx-toolbar-left > ul > li{background-color:inherit !important}#sx-toolbar-left > ul{white-space:nowrap}#sx-toolbar-left > ul > li{float:none !important;display:inline-block;white-space:nowrap}#sx-toolbar-right{white-space:nowrap}#sx-toolbar-right > ul{float:none !important;display:inline-block;white-space:nowrap}#sx-toolbar-center{text-align:left;margin:0 auto !important;display:inline-block}#sx-details > li{padding-left:4px;padding-right:4px}#sx-details a{color:black;font-weight:unset}#sx-details > .sx-max-anchor > a{display:inline;padding-left:4px;padding-right:4px}#sx-details > .sx-max-anchor > a:hover{text-decoration:underline}.sx-seperator{color:#DDD}.sx-thumb{display:inline-block;position:relative;color:#AAA;background-color:inherit}.sx-thumb-details{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);white-space:nowrap;background-color:inherit}.sx-thumb-details a{font-weight:unset;color:#AAA}.sx-thumb-details a:hover{text-decoration-line:underline}.sx-thumb-details > div{position:relative;left:-50%;white-space:nowrap}.thumb:hover > .sx-thumb > .sx-thumb-details{display:block}.sx-thumb > div > .sx-thumb-tags{position:absolute;top:calc(100% + 20px);left:50%;transform:translateX(-50%);white-space:nowrap;overflow:hidden;text-align:left;color:#999 !important;opacity:0;visibility:hidden;transition-delay:0s;pointer-events:none;height:0;z-index:10001;background-color:rgba(250, 250, 250, 1);font-size:0.9em}.sx-thumb > div > .sx-thumb-tags > .sx-tag-table{display:table}.sx-thumb > div > .sx-thumb-tags > .sx-tag-table > div{display:table-cell;padding:7px}.sx-thumb > div:hover > .sx-thumb-tags{opacity:1;visibility:visible;transition-delay:1s;height:initial}.sx-thumb-compare-info{display:block;text-align:center;white-space:normal;font-size:1.1em;min-width:210px}.sx-thumb-compare-info-padding{padding:5px;border-bottom:inherit}#sx-selected-in-menu{height:unset !important;line-height:unset !important;text-align:center}#sx-selected-in-menu > span{float:unset}.sx-good{color:green}.sx-bad{color:red}.sx-selected{background-color:#e1f0ff}.sx-active{background-color:#daffe6}.sx-pause{background-color:#fffcda}.sx-inactive{background-color:#ffdada}.sx-glow{animation:glow-animation .5s infinite alternate}@keyframes \"glow-animation\"{to{background-color:inherit;}}#sx-icon-hotkeys > ul{text-align:right}.sx-input-hotkey{width:100px;font-size:0.9em}.sx-similar{display:inline-block;position:relative;margin-top:20px}.sx-similar > form{padding-top:40px}.sx-tagspace{font-size:0.5em;opacity:0}#content{min-width:0 !important}#notice.stick{top:29px !important}#compare-posts-window{top:24px !important}.sx-icon-close{position:absolute;font-size:1.7em;top:0px;right:5px}.sx-sc-logo{width:24px;height:24px;background-repeat:no-repeat;background-position-x:center;display:inline-block;background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAAXNSR0ICQMB9xQAAAPBQTFRFAAAA/10A/1wA/2QA/2kH/2cF/3Uc/2gG/3ce/3MY/3Yd/3EW/2sL/3EU/2oK/3Qb/20P/3Qa/3EV/28S/3AU/3IX/20O/3Ub/24R/2oJ/3AT/2wN/2kI/2EA/3cf/3IW/24Q/38s/3sm/30p/34r/4U2/4o//4Ev/4My/4Ew/45F/5VQ/5xb/4tA/5xc/5JM/6Fk/6hx/6du/7SE/72S/7uP/8CY/9a7/8up/9O2/8ah/9Cy/9Cz/9e9/9e+/9a8/93H/9/K/+TS/+jZ/+LQ/+DN/+TT/+/l//79//bx/+/k/+7k//z7//z6//Xv//LrXSE6UwAAAAF0Uk5TAEDm2GYAAAAJcEhZcwAAAk8AAAKdAUSfnw0AAAAZdEVYdFNvZnR3YXJlAE1pY3Jvc29mdCBPZmZpY2V/7TVxAAAAsUlEQVQoz2NgoAlwwiHuzuyBXUKLxQCruDkrG7szNgkOTi5uVSzixjxsvGzsFhjinnz8AgYCgkIYEtrCIloMiqJihmjiDqziLF4MLkDSG1VCSVTACEjpSPDqooibSApKgWgfMUFWSyRxX2l+GSswy0yWXRJJQk9CVA3KdHVz9IOLu7GyCaorKoOAioaGhpw/TEJTnotLkBMOFPSh4qaMknzIQJLJGiJhY2uHCuzNGegDAKrCFCumdTdJAAAAAElFTkSuQmCC')}";
 document.head.appendChild(css);
+
 
 function exec(fn) {
 	var script = document.createElement('script');
@@ -599,9 +599,11 @@ exec(function () {
 					onSuccess(response);
 				}
 			}, function (status, response) { // onError
-				notice('Error while parenting: ' + xhr.status);
-				if (onError !== undefined) {
-					onError(xhr.status, xhr.response);
+				if(status !== 302){
+					notice('Error while parenting: ' + status);
+					if (onError !== undefined) {
+						onError(status, response);
+					}
 				}
 			});
 		}
@@ -2279,7 +2281,7 @@ exec(function () {
 				if (e.target.className === 'sx-input-hotkey') {
 
 					// Put together combination and save the options
-					if (k === 'ESCAPE') { // Delete hotkey when pressed ESC
+					if (k === 'ESCAPE' || k === 'BACKSPACE') { // Delete hotkey when pressed ESC
 						value = '';
 					} else {
 						value = [];
